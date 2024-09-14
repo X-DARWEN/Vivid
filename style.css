@@ -85,3 +85,21 @@ footer {
     color: white;
     font-size: 20px;
 }
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #dddddd;
+}
