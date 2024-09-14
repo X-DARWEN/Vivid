@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/Black V.jpg">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="Black V.jpg">
+    <link rel="stylesheet" href="signup-page.css">
     <title>Vivid - Sign Up</title>
 </head>
 <body>
-    <div class="signup-container">
-        <h1>Sign Up</h1>
+    <div class=".body">
+        <img src="Transparent Vivid.png" alt="Vivid Logo" class="logo">
         <form id="signup-form">
-            <input type="text" id="signup-username" placeholder="Username" required>
-            <input type="email" id="signup-email" placeholder="Email" required>
-            <input type="password" id="signup-password" placeholder="Password" required>
-            <button type="submit" class="btn signup-btn">Sign Up <i class='bx bxs-user'></i></button>
+            <div class="login-panel">
+                <div class="header">
+                    <p>Sign Up</p>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" id="username" class="username">
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" id="email" class="email">
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" id="password" class="password">
+                </div>
+                <div class="btn">
+                    <button type="submit" class="submit">Sign Up <i class='bx bxs-user'></i></button>
+                </div>
+                <div class="signup-form">
+                    <p>You Have A Account Already  <a href="../Login/login-page.html">Login</a></p>
+                </div>
         </form>
-        <p>Already have an account? <a href="login-page.html">Login</a></p>
     </div>
+<p class="copyrights">&copy; Youssef Dev.</p>
 
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
-    <script src="signup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="signup-page.js"></script>
 </body>
 </html>
