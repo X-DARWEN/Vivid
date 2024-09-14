@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Black V.jpg">
     <link rel="stylesheet" href="login-page.css">
     <title>Vivid - Login</title>
 </head>
 <body>
-    <img src="Transparent Vivid.png" alt="Vivid Logo" class="logo">
     <div class="body">
-        <div class="login-panel">
-        <div class="header">
-            <p>Login</p>
-        </div>
-        <div class="input-box">
-            <input type="email" placeholder="Email" class="email">
-        </div>
-        <div class="input-box">
-            <input type="password" placeholder="Password" class="password">
-        </div>
-        <div class="btn">
-            <button type="submit" class="submit">Login <i class='bx bxs-lock-open-alt' ></i></button>
-        </div>
-        <div class="signup-form">
-            <p>You Don't Have A Account  <a href="../Sign Up/signup-page.html">Sign Up</a></p>
-        </div>
+        <form id="login-form">
+            <div class="login-panel">
+                <div class="header">
+                    <p>Login</p>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" class="email" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" class="password" required>
+                </div>
+                <div class="btn">
+                    <button type="submit" class="submit">Login <i class="bx bxs-lock-open-alt"></i></button>
+                </div>
+                <div class="signup-form">
+                    <p>Don't have an account? <a href="../Sign Up/signup-page.html">Sign Up</a></p>
+                </div>
+            </div>
+        </form>
+        <img src="Transparent Vivid.png" alt="Vivid Logo" class="logo">
     </div>
-</div>
-<p class="copyrights">&copy; Youssef Dev.</p>
+    <p class="copyrights">&copy; Youssef Dev.</p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
+    <script src="login-page.js"></script>
 </body>
 </html>
