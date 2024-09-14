@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
-    font-family: "Poppins", system-ui;
+* {
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,187 +9,125 @@
 
 body {
     background-color: black;
+    color: white;
 }
 
 .body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
 .logo {
     height: 80px;
-    min-height: 20px;
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-bottom: 30px;
 }
 
 .login-panel {
     background-color: white;
-    border-color: white;
     border-radius: 20px;
-    border-style: solid;
-    border-width: 0px;
+    padding: 30px;
     width: 520px;
-    height: 550px;
 }
+
 .header {
-    display: flex;
-    justify-content: center;
-    color: rgb(0, 0, 0);
+    text-align: center;
+    color: black;
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 30px;
-    margin-top: 20px;
 }
 
 .input-box {
-    display: flex;
-    justify-items: center;
-    height: 90px;
+    margin-bottom: 20px;
 }
 
-.input-box .email {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     color: white;
     background-color: black;
+    border: none;
     border-radius: 50px;
-    border-style: solid;
-    border-color: white;
-    border-width: 0;
-    width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 30px;
+    width: calc(100% - 20px);
+    padding: 15px;
+    font-size: 18px;
     text-align: center;
-    font-size: 30px;
-    transition: 0.2s ease;
+    transition: box-shadow 0.3s ease;
 }
 
-.input-box .email:hover {
-    box-shadow: 0 0 1em rgb(0, 0, 0);
+input:hover {
+    box-shadow: 0 0 1em black;
 }
 
-.input-box .email::placeholder {
-    color: white;
-}
-
-.input-box .password {
-    color: white;
-    background-color: black;
-    border-radius: 50px;
-    border-style: solid;
-    border-color: rgb(0, 0, 0);
-    border-width: 0;
-    width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 30px;
-    transition: 0.2s ease;
-}
-
-.input-box .password:hover {
-    box-shadow: 0 0 1em rgb(0, 0, 0);
-}
-
-.input-box .password::placeholder {
-    color: white;
-}
-
-.input-box .username {
-    color: white;
-    background-color: black;
-    border-radius: 50px;
-    border-style: solid;
-    border-color: rgb(0, 0, 0);
-    border-width: 0;
-    width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 30px;
-    transition: 0.2s ease;
-}
-
-.input-box .username:hover {
-    box-shadow: 0 0 1em rgb(0, 0, 0);
-}
-
-.input-box .username::placeholder {
+input::placeholder {
     color: white;
 }
 
 .btn {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .submit {
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 20px;
-    background-color: rgb(0, 0, 0);
-    border-style: solid;
-    border-color: black;
+    background-color: black;
+    border: 2px solid black;
     border-radius: 40px;
     height: 56px;
     width: 200px;
-    margin-top: 30px;
-    transition: 0.3s ease;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .submit:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 1em rgb(0, 0, 0);
+    transform: scale(1.1);
+    box-shadow: 0 0 1em black;
     cursor: pointer;
 }
 
-.copyrights {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
-    margin-top: 23px;
-}
-
 .signup-form {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px
+    text-align: center;
+    margin-top: 20px;
 }
 
-.signup-form a{
-    color: rgb(0, 0, 0);
+.signup-form p {
+    margin-bottom: 0;
+    color: black;
+}
+
+.signup-form a {
+    color: black;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: text-shadow 0.3s ease;
 }
 
-.signup-form p{
-    color: rgb(0, 0, 0);
+.signup-form a:hover {
+    text-shadow: 0 0 1em black;
 }
 
-.signup-form a:hover{
-    text-shadow: 0 0 1em rgb(0, 0, 0);
+.copyrights {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
 }
 
-/* width */
+/* Scrollbar customization */
 ::-webkit-scrollbar {
     width: 15px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     background: transparent;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     border-radius: 100px;
     background: #ffffff;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #dddddd;
-  }
+}
