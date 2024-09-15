@@ -6,10 +6,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="Black V.jpg">
     <link rel="stylesheet" href="signup-page.css">
+    <script src="signup.js" type="module" defer></script>
     <title>Vivid - Sign Up</title>
 </head>
 <body>
-    <div class=".body">
+    <div class="body">
         <img src="Transparent Vivid.png" alt="Vivid Logo" class="logo">
         <form id="signup-form">
             <div class="login-panel">
@@ -26,16 +27,13 @@
                     <input type="password" placeholder="Password" id="password" class="password">
                 </div>
                 <div class="btn">
-                    <button type="submit" class="submit">Sign Up <i class='bx bxs-user'></i></button>
-                </div>
-                <div class="signup-form">
-                    <p>You Have A Account Already  <a href="../Login/login-page.html">Login</a></p>
+                    <button type="submit" class="submit" id="submit">Sign Up <i class='bx bxs-user'></i></button>
                 </div>
         </form>
+        <div class="signup-form">
+            <p>You Have A Account Already  <a href="../Login/login-page.html">Login</a></p>
+        </div>
     </div>
 <p class="copyrights">&copy; Youssef Dev.</p>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-<script src="signup-page.js"></script>
 </body>
 </html>

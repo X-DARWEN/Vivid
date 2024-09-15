@@ -1,19 +1,42 @@
-const loginForm = document.getElementById('login-form');
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyC_WVk8Oyq-CDJJANarPdfTpU6wtlzly6U",
+  authDomain: "vivid-db.firebaseapp.com",
+  projectId: "vivid-db",
+  storageBucket: "vivid-db.appspot.com",
+  messagingSenderId: "859851963543",
+  appId: "1:859851963543:web:a9d8a3111879ab0c8abdd2"
+};
 
-    // Sign in using Firebase
-    firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // Successful login
-            alert('Login successful');
-            window.location = 'dashboard.html'; // Redirect to dashboard or home page
-        })
-        .catch((error) => {
-            alert(error.message);
-        });
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Submit Button
+const submit = document.getElementById('submit');
+submit.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  // Inputs
+  const email = document.getElementById('email').value; // Use 'value' for inputs
+  const password = document.getElementById('password').value; // Use 'value' for inputs
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Successfully signed in
+      const user = userCredential.user;
+      alert("Logged in successfully! UwU");
+      window.location.href = "../Main Menu/main.html"; // Redirect after login
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      alert(`Error: ${errorMessage} UwU`);
+    });
 });
